@@ -40,12 +40,19 @@ A responsive web application featuring a modern sign-in and multi-step sign-up f
 ## Project Structure
 
 ├── index.html
+
 ├── data/
+
 │ ├── css/
+
 │ │ └── style.sass
+
 │ ├── js/
+
 │ │ └── main.js
+
 │ └── images/
+
 │ └── signin.png
 
 ## Features to be Added
