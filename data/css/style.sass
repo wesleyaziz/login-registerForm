@@ -1,0 +1,206 @@
+/* Variables */
+$primary-color: #0b4eb3
+
+/* Base */
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  text-decoration: none
+  list-style: none
+  user-select: none
+
+body
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+  margin: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  background-color: #f6f4f3
+
+footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  text-align: center
+  padding: 1rem
+  background-color: #f6f4f3
+  color: #666
+
+/* Global */
+section
+  display: inline-flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  width: 100%
+  gap: 2rem
+  padding: 0 2rem
+
+section.signup
+  display: none
+
+label
+  display: block
+  margin-bottom: 0.5rem
+
+input
+  display: block
+  width: 100%
+  padding: 0.75rem
+  border: 1px solid #ccc
+  border-radius: 0.25rem
+
+.width-50
+  width: 50%
+
+.ml-auto
+  margin-left: auto
+
+.mt-1
+  margin-top: 1rem
+
+.mb-1
+  margin-bottom: 1rem
+
+.text-center
+  text-align: center
+
+img
+  width: clamp(320px, 50%, 430px)
+  height: auto
+  display: block
+  margin: 0
+
+/* Component  */
+.line
+  display: block
+  width: 60%
+  height: 4px
+  background-color: $primary-color
+  margin: 1rem auto
+
+/* Progressbar */
+.progressbar
+  position: relative
+  display: flex
+  justify-content: space-between
+  counter-reset: step
+  margin: 2rem 0 4rem
+
+.progressbar::before,
+.progress
+  content: ""
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  height: 4px
+  width: 100%
+  background-color: #dcdcdc
+  z-index: -1
+
+.progress
+  background-color: $primary-color
+  width: 0%
+  transition: 0.3s
+
+.progress-step
+  width: 2rem
+  height: 2rem
+  background-color: #dcdcdc
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &::before
+    counter-increment: step
+    content: counter(step)
+
+  &::after
+    content: attr(data-title)
+    position: absolute
+    top: calc(100% + 0.5rem)
+    font-size: 0.85rem
+    color: #666
+
+.progress-step-active
+  background-color: $primary-color
+  color: #f3f3f3
+
+/* Form */
+.form
+  width: clamp(320px, 30%, 430px)
+  margin: 0
+  border: 1px solid #ccc
+  border-radius: 0.35rem
+  padding: 1.5rem
+
+.form-step
+  display: none
+  transform-origin: top
+  animation: animate 0.5s
+
+.form-step-active
+  display: block
+
+.input-group
+  margin: 2rem 0
+
+.signupForm
+  .input-group
+    margin: 1rem 0
+
+label
+  font-weight: 500
+
+.signinForm
+  label
+    margin-top: 1rem
+
+input[type="reset"]
+  background-color: #444
+
+.msg
+  display: none
+  color: red
+
+@keyframes animate
+  from
+    transform: scale(1, 0)
+    opacity: 0
+  to
+    transform: scale(1)
+    opacity: 1
+
+/* Button */
+.btns-group
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 1.5rem
+
+.btn
+  padding: 0.75rem
+  display: block
+  text-decoration: none
+  background-color: $primary-color
+  color: #f3f3f3
+  text-align: center
+  border-radius: 0.25rem
+  cursor: pointer
+  transition: 0.3s
+
+  &:hover
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px $primary-color
+
+.linkBtn
+  color: $primary-color
+  font-weight: 500
+  &:hover
+    color: red
+
+@media screen and (max-width:768px)
+  img
+    display: none

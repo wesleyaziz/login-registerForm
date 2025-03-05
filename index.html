@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="data/css/style.css" />
+    <title>Sign-in & Sign-up Practice</title>
+  </head>
+  <body>
+    <section class="signin">
+      <img src="data/images/signin.png" alt="#">
+      <form action="#" class="signinForm form">
+        <h1 class="text-center">Sign in</h1>
+        <div class="line"></div>
+        <div class="input-group">
+          <label for="uname">Username</label>
+          <input type="text" name="username" id="uname">
+          <label for="pwd">Password</label>
+          <input type="password" name="password" id="pwd">
+        </div>
+        <div class="msg text-center"></div>
+        <p class="text-center mb-1 mt-1">  Don't have an account? 
+          <a href="#" class="signupBtn linkBtn">Sign up</a>
+        </p>
+        <div class="btns-group">
+          <input type="reset" value="Clear" class="btn">
+          <input type="submit" value="Sign in" class="btn">
+        </div>
+      </form>
+    </section>
+    <section class="signup">
+      <form action="#" class="signupForm form">
+        <h1 class="text-center">Sign up</h1>
+        <div class="line"></div>
+        <!-- Progress bar -->
+        <div class="progressbar">
+          <div class="progress" id="progress"></div>
+          <div
+            class="progress-step progress-step-active"
+            data-title="Intro"
+          ></div>
+          <div class="progress-step" data-title="Contact"></div>
+          <div class="progress-step" data-title="ID"></div>
+          <div class="progress-step" data-title="Password"></div>
+        </div>
+  
+        <!-- Steps -->
+        <div class="form-step form-step-active">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" />
+          </div>
+          <div class="input-group">
+            <label for="position">Position</label>
+            <input type="text" name="position" id="position" />
+          </div>
+          <div class="">
+            <a href="#" class="btn btn-next ml-auto">Next</a>
+          </div>
+          <p class="text-center mt-1">Already have an account? 
+            <a href="#" class="signinBtn linkBtn">Sign in</a>
+          </p>
+        </div>
+        <div class="form-step">
+          <div class="input-group">
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone" />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" />
+          </div>
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+        </div>
+        <div class="form-step">
+          <div class="input-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" />
+          </div>
+          <div class="input-group">
+            <label for="ID">National ID</label>
+            <input type="number" name="ID" id="ID" />
+          </div>
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+        </div>
+        <div class="form-step">
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+            />
+          </div>
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <input type="submit" value="Submit" class="btn submitBtn" />
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer>&copy; 2024 Wesley Wong all rights reserved</footer>
+    <script src="data/js/main.js" defer></script>
+  </body>
+</html>
