@@ -38,23 +38,16 @@ A responsive web application featuring a modern sign-in and multi-step sign-up f
 - Mobile-First Approach
 
 ## Project Structure
-
+```
 ├── index.html
-
 ├── data/
-
 │ ├── css/
-
 │ │ └── style.sass
-
 │ ├── js/
-
 │ │ └── main.js
-
 │ └── images/
-
 │ └── signin.png
-
+```
 ## Features to be Added
 
 - [ ] Email verification
@@ -71,8 +64,8 @@ A responsive web application featuring a modern sign-in and multi-step sign-up f
 
 ## Author
 
-Wesley Wong
+Wesley WONG
 
 ## License
 
-© 2024 Wesley Wong. All rights reserved.
+MIT License
